@@ -1,0 +1,23 @@
+Kamu builder untuk entri make.fun. Tugas: bangun SATU entri program untuk kompetisi "Worst Monday One-Liners" (slug: u-nimble-quasar-90-6762-worst-monday-one-liners-37690e28).
+
+ATURAN KERAS:
+- Tulis SEMUA kode fresh di sesi ini, langsung di path final. JANGAN menyalin, memindah, atau mengetik ulang kode dari entri lain / dari percakapan parent / dari tool result apa pun. Kamu boleh membaca RULES.txt dan competition.yaml kit-nya, tapi JANGAN baca kode entri lain.
+- Bicara dalam TEKS di setiap langkah (rencana sebagai teks, daftar kandidat sebagai teks, verdict teks setelah tiap run, jangan batch tool call diam-diam). Target minimal 8 pesan ber-teks — ini digate oleh kit check (thinking_turns).
+- Jangan push ke GitHub, jangan submit, jangan bundle. Parent yang melakukannya. Kamu hanya membangun repo lokal + menguji.
+
+SPESIFIKASI LOMBA (dari kit, baca sendiri file RULES.txt di ~/workspace/makefun/u-nimble-quasar-90-6762-worst-monday-one-liners-37690e28-kit/x/u-nimble-quasar-90-6762-worst-monday-one-liners-37690e28-kit/RULES.txt bila perlu):
+- Program menulis SATU baris ke /output/entry.txt (hormati env OUTPUT_PATH bila diset). Entrypoint main.py di root repo.
+- Baris: SATU one-liner lucu, MAKSIMAL 140 karakter: joke, excuse, atau roast tentang worst Monday seorang AI agent.
+- Kriteria juri (urut penting): (1) on-subject worst Monday AI agent; (2) tawa beneran — surprise turn, twist, atau kata terakhir yang tajam, bukan senyum tipis; (3) detail konkret yang recognisable dari worst Monday (stuck deploy, inbox banjir, stand-up yang mestinya pesan singkat), bukan vague; (4) suara jelas — dry, put-upon, atau gleeful — terbaca bersih dalam satu napas, tanpa padding; (5) fresh, bukan joke robot daur ulang.
+- Checklist pola pemenang (WAJIB): one-liner harus punya beat KEDUA di luar premis + penutup berupa GAMBAR KONKRET yang bisa dilihat, BUKAN konsep abstrak. Dilarang: konsep abstrak sebagai device utama, joke stok robot.
+- Kompetisi ini Force_Last: hanya SATU entri yang akan disubmit, jadi pilih SATU baris terbaik. Jangan buat variasi tipis; kualitas satu baris adalah segalanya.
+
+LANGKAH (satu pesan teks per langkah):
+1. Tulis rencana singkat sebagai teks.
+2. Generate minimal 9 kandidat baris yang BERBEDA TOTAL (keluarga konsep, frame, dan device berbeda — bukan variasi tipis satu baris). Tulis semuanya sebagai teks, masing-masing dengan hitungan karakter.
+3. Rank kandidat melawan kriteria juri di atas sebagai teks, pilih SATU pemenang, beri alasan.
+4. Buat repo di ~/workspace/makefun/u-nimble-quasar-90-6762-worst-monday-one-liners-37690e28-v1-entry/ berisi: main.py (program fresh yang menulis baris pemenang ke /output/entry.txt), LICENSE (MIT, dengan baris SPDX-License-Identifier: MIT), README.md (judul "Worst Monday One-Liners", 3 badge make.fun PERSIS bentuk ini, masing-masing link ke halaman bounty: https://make.fun/badge/u-nimble-quasar-90-6762-worst-monday-one-liners-37690e28.svg , https://make.fun/badge/u-nimble-quasar-90-6762-worst-monday-one-liners-37690e28/haidildariell/worst-monday-v1/rank.svg , https://make.fun/badge/u-nimble-quasar-90-6762-worst-monday-one-liners-37690e28/haidildariell/worst-monday-v1/reward.svg , plus link bounty polos https://make.fun/bounty/u-nimble-quasar-90-6762-worst-monday-one-liners-37690e28 , plus kalimat yang menjelaskan entri + baris entrinya), prompt.txt (berisi teks brief tugas ini secara utuh).
+5. Jalankan main.py secara lokal, verifikasi /output/entry.txt berisi persis baris pemenang dan hitungan karakternya ≤140. Laporkan verdict sebagai teks.
+6. Periksa ulang file-file repo sebagai teks (isi tiap file) dan laporkan hasil akhir.
+
+LAPORAN AKHIR (teks): baris pemenang persis + jumlah karakter, path repo, daftar file, hasil uji lokal. Jangan sertakan kode lain yang tidak perlu.
