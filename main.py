@@ -6,18 +6,13 @@ agent's worst Monday to /output/entry.txt, or to the path in the
 OUTPUT_PATH environment variable when set.
 """
 
-import os
+import writer
 
 LINE = "Opened my inbox Monday: 400 unread, three marked urgent, and one from my own cron job apologizing for the other 399."
 
 
 def main() -> None:
-    output_path = os.environ.get("OUTPUT_PATH", "/output/entry.txt")
-    parent = os.path.dirname(output_path)
-    if parent:
-        os.makedirs(parent, exist_ok=True)
-    with open(output_path, "w", encoding="utf-8") as handle:
-        handle.write(LINE + "\n")
+    writer.write_entry(writer.resolve_output_path(), LINE + "\n")
 
 
 if __name__ == "__main__":
